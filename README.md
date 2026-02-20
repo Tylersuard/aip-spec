@@ -24,31 +24,7 @@ Key ideas:
   - `QRY` = generate a node from parameters (search/filter/paginate)
   - `ACT` = change state (cart/checkout/payment)
  
-## Example Node:
-
-TITLE: Heavy-Duty Industrial Gear
-DESCRIPTION: Technical specifications and purchase options for the HG-9000 model.
----
-CONTENT:
-The HG-9000 is a steel-reinforced industrial gear designed for high-torque 
-applications. 
-- Material: Grade 8 Carbon Steel
-- Weight: 4.5kg
-- Compatibility: Universal 40mm shafts
-- Status: In Stock (14 units)
-- Price: $89.00
----
-ACTIONS:
-1. [NAV] Back to Catalog | url: /catalog/gears
-2. [ACT] Add to Cart | url: /cart/add?id=123&qty=1
-3. [QRY] Check Shipping Estimates | url: /shipping/calc{zip_code}
-4. [NAV] View Technical Manual | url: /docs/hg9000-manual
-
-To make it less complex, think of an **AIP node** as a "Choose Your Own Adventure" book written specifically for an AI. It strips away the buttons, colors, and ads, leaving only the data and the choices.
-
 Here is a sample AIP node representing a product page in a fictional store:
-
----
 
 ### Sample AIP Node: `product_123.aip.txt`
 
@@ -72,8 +48,6 @@ ACTIONS:
 4. [NAV] View Technical Manual | url: /docs/hg9000-manual
 
 ```
-
----
 
 ### How an AI "sees" this
 
