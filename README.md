@@ -44,6 +44,53 @@ ACTIONS:
 3. [QRY] Check Shipping Estimates | url: /shipping/calc{zip_code}
 4. [NAV] View Technical Manual | url: /docs/hg9000-manual
 
+To make it less complex, think of an **AIP node** as a "Choose Your Own Adventure" book written specifically for an AI. It strips away the buttons, colors, and ads, leaving only the data and the choices.
+
+Here is a sample AIP node representing a product page in a fictional store:
+
+---
+
+### Sample AIP Node: `product_123.aip.txt`
+
+```text
+TITLE: Heavy-Duty Industrial Gear
+DESCRIPTION: Technical specifications and purchase options for the HG-9000 model.
+---
+CONTENT:
+The HG-9000 is a steel-reinforced industrial gear designed for high-torque 
+applications. 
+- Material: Grade 8 Carbon Steel
+- Weight: 4.5kg
+- Compatibility: Universal 40mm shafts
+- Status: In Stock (14 units)
+- Price: $89.00
+---
+ACTIONS:
+1. [NAV] Back to Catalog | url: /catalog/gears
+2. [ACT] Add to Cart | url: /cart/add?id=123&qty=1
+3. [QRY] Check Shipping Estimates | url: /shipping/calc{zip_code}
+4. [NAV] View Technical Manual | url: /docs/hg9000-manual
+
+```
+
+---
+
+### How an AI "sees" this
+
+Instead of scanning 5,000 lines of HTML code to find a "Buy" button, the AI looks at this text file and immediately understands:
+
+* **What this is:** An industrial gear (from the `TITLE`).
+* **The Details:** It costs $89 and 14 are left (from the `CONTENT`).
+* **What it can do next:** It has exactly 4 options. It doesn't have to "guess" where to click; it just picks Action #2 to buy it.
+
+### Why this is better for your AI agents:
+
+1. **Lower Cost:** It uses about 150 tokens. A standard web page can easily use 5,000+ tokens.
+2. **Higher Accuracy:** There are no "pop-ups" or "sidebar links" to distract the model.
+3. **Speed:** The AI can "read" and "decide" in a fraction of a second.
+
+**Would you like me to show you how the `aip_browser.py` script would process this specific node?**
+
 ## Quick start (local)
 
 ```bash
