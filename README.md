@@ -1,17 +1,34 @@
 # Agentic Internet Protocol (AIP)
 
-AIP is a tiny, agent-native “web” format: each page is a **small, human-readable text node** containing (1) a title, (2) a description, (3) the page **content**, and (4) a **small menu of next actions**.
+The Web for Machines.
 
+AIP is a minimalist, text-only protocol designed for AI Agents. It replaces heavy, chaotic HTML with clean, predictable "Nodes."
+
+📄 What is a Node?
+An AIP Node is a simple .txt file divided into four clear parts. This structure ensures an AI always knows exactly where it is and what it can do.
+
+    Title: The name of the current location.
+    Description: High-level context (The "System Prompt" for the page).
+    Content: The actual data (Markdown tables, lists, or text).
+    Actions: The "Edges"—exactly where the agent can move next.
+
+🚀 Why Use It?
+    Token Efficiency: 150 tokens vs. 5,000+ for standard HTML.
+    Reduced Hallucination: Agents don't have to "guess" which button to click.
+    Speed: No Javascript, no CSS, no ads. Just pure logic.
+
+🛠 Navigation Types (The Edges)
+
+AIP limits choices to three simple actions to prevent model confusion:
+    NAV: Move to a static page (e.g., View Cart).
+    QRY: A dynamic search or filter (e.g., Find by ID).
+    ACT: A state-changing action (e.g., Pay Now).
+    
 This repo contains:
 
 - **`SPEC.md`** — the AIP v0.2 draft (format + discovery + client behavior)
 - **`examples/`** — two “hero sites” (ecommerce + billing) implemented as AIP nodes
 - **`reference/python/`** — a minimal parser/validator + a tiny interactive node browser CLI
-
-## Why AIP
-
-Modern models can handle huge context windows, but that can get expensive and slow if you just want to read one page and take one step.
-AIP is designed for **incremental disclosure**: show the model only what it needs *right now*.
 
 Key ideas:
 
