@@ -10,7 +10,7 @@ An AIP Node is a simple .txt file divided into four clear parts. This structure 
     Title: The name of the current location.
     Description: High-level context (The "System Prompt" for the page).
     Content: The actual data (Markdown tables, lists, or text).
-    Actions: The "Edges"—exactly where the agent can move next.
+    Actions: The "Edges", exactly where the agent can move next.
 
 🚀 Why Use It?
     Token Efficiency: 150 tokens vs. 5,000+ for standard HTML.
