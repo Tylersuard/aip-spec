@@ -7,6 +7,8 @@ AIP is a minimalist, text-only protocol designed for AI Agents. It replaces heav
 📄 What is a Node?
 An AIP Node is a simple .txt file divided into four clear parts. This structure ensures an AI always knows exactly where it is and what it can do.
 
+<img width="1024" height="1024" alt="Gemini_Generated_Image_s47465s47465s474" src="https://github.com/user-attachments/assets/6ec2c8b3-f3de-4b6e-a418-2e3b79d09812" />
+
     Title: The name of the current location.
     Description: High-level context (The "System Prompt" for the page).
     Content: The actual data (Markdown tables, lists, or text).
