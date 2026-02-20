@@ -1,0 +1,15 @@
+AIP/0.2
+Node: aip://acornmart.example/order/987
+Fetch: file://examples/acornmart/order/987.aip.txt
+Title: Order 987
+Description: Order confirmation (demo).
+
+Content:
+  Order: 987
+  Status: confirmed
+  Items: 12345 (qty: 1)
+  Total: $97.01
+  Next: track shipment (not implemented in demo).
+
+Edges:
+  home NAV GET aip://acornmart.example/ - return home

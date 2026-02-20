@@ -1,0 +1,12 @@
+AIP/0.2
+Node: aip://paysprout.example/help
+Fetch: file://examples/paysprout/help.aip.txt
+Title: Billing Help
+Description: How to pay and interpret invoices.
+
+Content:
+  Payments are actions and require X-Request-Key to deduplicate retries.
+  Nodes are short to reduce cost and reduce hidden prompt-injection surface.
+
+Edges:
+  back NAV GET aip://paysprout.example/ - return home

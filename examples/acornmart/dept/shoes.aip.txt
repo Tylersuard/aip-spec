@@ -1,0 +1,21 @@
+AIP/0.2
+Node: aip://acornmart.example/dept/shoes
+Fetch: file://examples/acornmart/dept/shoes.aip.txt
+Title: Department: Shoes
+Description: Browse shoes with a list query.
+
+Content:
+  This node is intentionally small.
+  Use list to get a results node with items and pagination.
+
+Edges:
+  list QRY GET self - list shoes
+    Input:
+    sort: string optional (query) - enum(relevance|price_asc|price_desc)
+    size: string optional (query) - e.g. "10"
+    limit: integer optional (query) - min=1 max=20
+    cursor: string optional (query) - pagination cursor
+    Output:
+    200: text/aip - results node
+  open NAV GET aip://acornmart.example/product/12345 - open featured product
+  back NAV GET aip://acornmart.example/catalog - back to catalog

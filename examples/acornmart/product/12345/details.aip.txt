@@ -1,0 +1,13 @@
+AIP/0.2
+Node: aip://acornmart.example/product/12345/details
+Fetch: file://examples/acornmart/product/12345/details.aip.txt
+Title: Trail Shoes Model Z, Details
+Description: Sizing, care, and returns.
+
+Content:
+  Sizing: runs narrow, consider half size up.
+  Care: wipe with damp cloth, air dry.
+  Returns: 30 days, unworn condition.
+
+Edges:
+  back NAV GET aip://acornmart.example/product/12345 - back to product

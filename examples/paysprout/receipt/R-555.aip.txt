@@ -1,0 +1,16 @@
+AIP/0.2
+Node: aip://paysprout.example/receipt/R-555
+Fetch: file://examples/paysprout/receipt/R-555.aip.txt
+Title: Receipt R-555
+Description: Payment receipt (demo).
+
+Content:
+  Receipt: R-555
+  Invoice: INV-1007
+  Paid: $248.12
+  Method: card
+  Status: succeeded
+
+Edges:
+  invoices NAV GET aip://paysprout.example/invoices - back to invoices
+  home NAV GET aip://paysprout.example/ - return home

@@ -1,0 +1,16 @@
+AIP/0.2
+Node: aip://acornmart.example/
+Fetch: file://examples/acornmart/root.aip.txt
+Title: AcornMart
+Description: Agent-native shopping demo.
+
+Content:
+  Welcome to AcornMart, a tiny agent-only ecommerce demo.
+  Pick one of the edges below to browse or search.
+  Pages are intentionally short and edges are intentionally few.
+
+Edges:
+  catalog NAV GET aip://acornmart.example/catalog - browse departments
+  search QRY GET aip://acornmart.example/search - search for products
+  cart NAV GET aip://acornmart.example/cart - view active cart
+  help NAV GET aip://acornmart.example/help - policies and help

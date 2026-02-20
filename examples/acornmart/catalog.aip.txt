@@ -1,0 +1,14 @@
+AIP/0.2
+Node: aip://acornmart.example/catalog
+Fetch: file://examples/acornmart/catalog.aip.txt
+Title: Catalog
+Description: Departments and featured collections.
+
+Content:
+  Departments are small graphs. Each department page offers a list query.
+  Tip: use Search for keyword queries.
+
+Edges:
+  shoes NAV GET aip://acornmart.example/dept/shoes - browse shoes
+  snacks NAV GET aip://acornmart.example/dept/snacks - browse snacks
+  back NAV GET aip://acornmart.example/ - return home

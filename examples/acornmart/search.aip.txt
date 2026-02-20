@@ -1,0 +1,19 @@
+AIP/0.2
+Node: aip://acornmart.example/search
+Fetch: file://examples/acornmart/search.aip.txt
+Title: Search
+Description: Find products by keywords.
+
+Content:
+  Use the run edge to generate a results node.
+  In a real site, this would return a computed node per query.
+
+Edges:
+  run QRY GET self - run a search
+    Input:
+    q: string required (query) - keywords, e.g. "trail shoes"
+    limit: integer optional (query) - min=1 max=20
+    cursor: string optional (query) - pagination cursor
+    Output:
+    200: text/aip - results node
+  back NAV GET aip://acornmart.example/ - return home

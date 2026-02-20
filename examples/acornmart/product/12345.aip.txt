@@ -1,0 +1,24 @@
+AIP/0.2
+Node: aip://acornmart.example/product/12345
+Fetch: file://examples/acornmart/product/12345.aip.txt
+Title: Trail Shoes Model Z
+Description: Lightweight trail shoes, sizes 6–13.
+
+Content:
+  Price: $89.00
+  Sizes: 6–13
+  Materials: mesh upper, rubber sole
+  Shipping: free over $50
+  Note: runs slightly narrow.
+
+Edges:
+  add ACT POST /cart/add - add to cart
+    Input:
+    sku: string required (body) - "12345"
+    qty: integer required (body) - min=1 max=10
+    retry_key: string required (header) - unique token for this intended add
+    Output:
+    200: text/aip - cart node
+    Retry-Key: X-Request-Key
+  details NAV GET aip://acornmart.example/product/12345/details - sizing and care
+  back NAV GET aip://acornmart.example/dept/shoes - back to shoes

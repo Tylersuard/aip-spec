@@ -1,0 +1,13 @@
+AIP/0.2
+Node: aip://acornmart.example/help
+Fetch: file://examples/acornmart/help.aip.txt
+Title: Help
+Description: Simple help and policy info.
+
+Content:
+  This is an agent-only demo site.
+  Actions that change state require a retry-dedup header (X-Request-Key).
+  Keep nodes short to make it harder to hide malicious instructions.
+
+Edges:
+  back NAV GET aip://acornmart.example/ - return home

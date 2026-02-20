@@ -1,0 +1,22 @@
+AIP/0.2
+Node: aip://paysprout.example/invoices
+Fetch: file://examples/paysprout/invoices.aip.txt
+Title: Invoices
+Description: Browse invoices with a query edge.
+
+Content:
+  This page shows a small summary list.
+  Use list to filter by status and paginate.
+
+Edges:
+  list QRY GET self - list invoices
+    Input:
+    status: string optional (query) - enum(open|paid|overdue)
+    from: string optional (query) - YYYY-MM-DD
+    to: string optional (query) - YYYY-MM-DD
+    limit: integer optional (query) - min=1 max=50
+    cursor: string optional (query) - pagination cursor
+    Output:
+    200: text/aip - results node
+  open NAV GET aip://paysprout.example/invoice/INV-1007 - open invoice INV-1007
+  back NAV GET aip://paysprout.example/ - return home

@@ -1,0 +1,24 @@
+AIP/0.2
+Node: aip://acornmart.example/cart
+Fetch: file://examples/acornmart/cart.aip.txt
+Title: Cart
+Description: Current cart contents (demo).
+
+Content:
+  Items:
+  - 12345 Trail Shoes Model Z (qty: 1)
+  Subtotal: $89.00
+  Estimated tax: $8.01
+  Estimated total: $97.01
+
+Edges:
+  remove ACT POST /cart/remove - remove an item
+    Input:
+    sku: string required (body)
+    qty: integer optional (body)
+    retry_key: string required (header) - unique token for this intended remove
+    Output:
+    200: text/aip - cart node
+    Retry-Key: X-Request-Key
+  checkout NAV GET aip://acornmart.example/checkout - begin checkout
+  back NAV GET aip://acornmart.example/ - return home

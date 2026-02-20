@@ -1,0 +1,13 @@
+AIP/0.2
+Node: aip://paysprout.example/
+Fetch: file://examples/paysprout/root.aip.txt
+Title: PaySprout
+Description: Agent-native billing demo.
+
+Content:
+  Welcome to PaySprout.
+  Use Invoices to browse outstanding bills or Search to filter.
+
+Edges:
+  invoices NAV GET aip://paysprout.example/invoices - list invoices
+  help NAV GET aip://paysprout.example/help - billing help

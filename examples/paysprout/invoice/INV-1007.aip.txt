@@ -1,0 +1,24 @@
+AIP/0.2
+Node: aip://paysprout.example/invoice/INV-1007
+Fetch: file://examples/paysprout/invoice/INV-1007.aip.txt
+Title: Invoice INV-1007
+Description: Amount due $248.12, due date 2026-03-01.
+
+Content:
+  Vendor: Example Utilities
+  Invoice: INV-1007
+  Due: 2026-03-01
+  Amount: $248.12
+  Status: open
+
+Edges:
+  pay ACT POST /pay - submit payment
+    Input:
+    invoice_id: string required (body) - "INV-1007"
+    amount: number required (body) - min=0.01
+    method: string required (body) - enum(card|ach)
+    retry_key: string required (header) - unique token for this intended payment
+    Output:
+    200: text/aip - receipt node
+    Retry-Key: X-Request-Key
+  back NAV GET aip://paysprout.example/invoices - back to invoices

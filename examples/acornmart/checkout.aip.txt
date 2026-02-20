@@ -1,0 +1,19 @@
+AIP/0.2
+Node: aip://acornmart.example/checkout
+Fetch: file://examples/acornmart/checkout.aip.txt
+Title: Checkout
+Description: Confirm shipping and place order.
+
+Content:
+  Shipping: standard (3–5 days)
+  Payment: card on file (demo)
+  Review total before placing the order.
+
+Edges:
+  place ACT POST /order/place - place order
+    Input:
+    retry_key: string required (header) - unique token for this intended order
+    Output:
+    200: text/aip - order confirmation node
+    Retry-Key: X-Request-Key
+  back NAV GET aip://acornmart.example/cart - back to cart
