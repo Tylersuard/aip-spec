@@ -12,10 +12,10 @@ An AIP Node is a simple .txt file divided into four clear parts. This structure 
     Content: The actual data (Markdown tables, lists, or text).
     Actions: The "Edges", exactly where the agent can move next.
 
-🚀 Why Use It?
-    Token Efficiency: 150 tokens vs. 5,000+ for standard HTML.
-    Reduced Hallucination: Agents don't have to "guess" which button to click.
-    Speed: No Javascript, no CSS, no ads. Just pure logic.
+🚀 Why Use It?  
+ - Token Efficiency: 150 tokens vs. 5,000+ for standard HTML.
+ - Reduced Hallucination: Agents don't have to "guess" which button to click.
+ - Speed: No Javascript, no CSS, no ads. Just pure logic.
 
 🛠 Navigation Types (The Edges)
 
