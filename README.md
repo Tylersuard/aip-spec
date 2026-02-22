@@ -2,6 +2,17 @@
 
 The Web for Machines.
 
+
+Key ideas:
+
+Agent-first sites (not “human sites + a helper file”)
+Websites as graphs: nodes (pages) + edges (routes)
+Short pages (recommended: well under 8,000 words) to reduce cost/latency and make prompt-injection harder to hide
+Small action space (recommended: ~6 edges per node) so simpler models don’t get confused
+Explicit edge types:
+NAV = go to a known node
+QRY = generate a node from parameters (search/filter/paginate)
+ACT = change state (cart/checkout/payment)
 AIP is a minimalist, text-only protocol designed for AI Agents. It replaces heavy, chaotic HTML with clean, predictable "Nodes."
 
 📄 What is a Node?
@@ -32,17 +43,7 @@ This repo contains:
 - **`examples/`** — two “hero sites” (ecommerce + billing) implemented as AIP nodes
 - **`reference/python/`** — a minimal parser/validator + a tiny interactive node browser CLI
 
-Key ideas:
 
-- **Agent-first sites** (not “human sites + a helper file”)
-- Websites as **graphs**: nodes (pages) + edges (routes)
-- **Short pages** (recommended: well under 8,000 words) to reduce cost/latency and make prompt-injection harder to hide
-- **Small action space** (recommended: ~6 edges per node) so simpler models don’t get confused
-- Explicit edge types:
-  - `NAV` = go to a known node
-  - `QRY` = generate a node from parameters (search/filter/paginate)
-  - `ACT` = change state (cart/checkout/payment)
- 
 Here is a sample AIP node representing a product page in a fictional store:
 
 ### Sample AIP Node: `product_123.aip.txt`
