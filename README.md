@@ -1,18 +1,18 @@
-# Agentic Internet Protocol (AIP)
+3# Agentic Internet Protocol (AIP)
 
 The Web for Machines.
 
 
 Key ideas:
 
-Agent-first sites (not “human sites + a helper file”)
-Websites as graphs: nodes (pages) + edges (routes)
-Short pages (recommended: well under 8,000 words) to reduce cost/latency and make prompt-injection harder to hide
-Small action space (recommended: ~6 edges per node) so simpler models don’t get confused
-Explicit edge types:
-NAV = go to a known node
-QRY = generate a node from parameters (search/filter/paginate)
-ACT = change state (cart/checkout/payment)
+ - Agent-first sites (not “human sites + a helper file”)
+ - Websites as graphs: nodes (pages) + edges (routes)
+ - Short pages (recommended: well under 8,000 words) to reduce cost/latency and make prompt-injection harder to hide
+ - Small action space (recommended: ~6 edges per node) so simpler models don’t get confused
+ - Explicit edge types:
+   - NAV = go to a known node
+   - QRY = generate a node from parameters (search/filter/paginate)
+   - ACT = change state (cart/checkout/payment)
 AIP is a minimalist, text-only protocol designed for AI Agents. It replaces heavy, chaotic HTML with clean, predictable "Nodes."
 
 📄 What is a Node?
