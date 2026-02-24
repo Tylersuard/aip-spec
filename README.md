@@ -1,4 +1,4 @@
-3# Agentic Internet Protocol (AIP)
+# Agentic Internet Protocol (AIP)
 
 The Web for Machines.
 
